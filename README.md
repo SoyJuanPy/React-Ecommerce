@@ -35,16 +35,12 @@ Para construir el proyecto para producción, usá:
 bun run build
 ```
 
-Y para correr los tests:
+Pagina montada en Vercel:
 
 ```bash
-bun run test
-```
 
-Pagina Montada en vercel
-
-$ bash
 https://react-ecommerce-4alurd1gg-juampys-projects.vercel.app/login
+```
 
 ```
 
