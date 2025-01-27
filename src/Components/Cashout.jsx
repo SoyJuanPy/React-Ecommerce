@@ -83,7 +83,7 @@ export const Cashout = (props) => {
       <Navbar user={props.user} />
       <div className="container">
         <br />
-        <h2>Cashout Details</h2>
+        <h2>Detalles</h2>
         <br />
         {successMsg && <div className="success-msg">{successMsg}</div>}
         <form
@@ -91,7 +91,7 @@ export const Cashout = (props) => {
           className="form-group"
           onSubmit={cashoutSubmit}
         >
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Nombre</label>
           <input
             type="text"
             className="form-control"
@@ -109,7 +109,7 @@ export const Cashout = (props) => {
             disabled
           />
           <br />
-          <label htmlFor="Cell No">Cell No</label>
+          <label htmlFor="Cell No">Telefono</label>
           <input
             type="number"
             className="form-control"
@@ -119,7 +119,7 @@ export const Cashout = (props) => {
             placeholder="eg 03123456789"
           />
           <br />
-          <label htmlFor="Delivery Address">Delivery Address</label>
+          <label htmlFor="Delivery Address">Direccion</label>
           <input
             type="text"
             className="form-control"
@@ -128,7 +128,7 @@ export const Cashout = (props) => {
             value={address}
           />
           <br />
-          <label htmlFor="Price To Pay">Price To Pay</label>
+          <label htmlFor="Price To Pay">Precio a pagar</label>
           <input
             type="number"
             className="form-control"
@@ -137,7 +137,7 @@ export const Cashout = (props) => {
             disabled
           />
           <br />
-          <label htmlFor="Total No of Products">Total No of Products</label>
+          <label htmlFor="Total No of Products">Total de productos</label>
           <input
             type="number"
             className="form-control"
@@ -147,7 +147,7 @@ export const Cashout = (props) => {
           />
           <br />
           <button type="submit" className="btn btn-success btn-md mybtn">
-            SUBMIT
+            Pagar
           </button>
         </form>
         {error && <span className="error-msg">{error}</span>}

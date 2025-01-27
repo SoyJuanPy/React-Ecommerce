@@ -25,16 +25,13 @@ export const Cart = ({ user }) => {
     <>
       <Navbar user={user} />
       <>
-        {shoppingCart.length !== 0 && <h1>Cart</h1>}
+        {shoppingCart.length !== 0 && <h1>Carrito</h1>}
         <div className="cart-container">
           {shoppingCart.length === 0 && (
             <>
+              <div>No hay productos en su carrito</div>
               <div>
-                No items in your cart or slow internet causing trouble (Refresh
-                the page) or you are not logged in.
-              </div>
-              <div>
-                <Link to="/">Return to Home page</Link>
+                <Link to="/">Regresar al inicio</Link>
               </div>
             </>
           )}
@@ -87,13 +84,13 @@ export const Cart = ({ user }) => {
             ))}
           {shoppingCart.length > 0 && (
             <div className="cart-summary">
-              <div className="cart-summary-heading">Cart-Summary</div>
+              <div className="cart-summary-heading">Resumen</div>
               <div className="cart-summary-price">
-                <span>Total Price</span>
+                <span>Precio Total</span>
                 <span>{totalPrice}</span>
               </div>
               <div className="cart-summary-price">
-                <span>Total Qty</span>
+                <span>Cantidad</span>
                 <span>{totalQty}</span>
               </div>
               <Link to="/cashout" className="cashout-link">
@@ -101,7 +98,7 @@ export const Cart = ({ user }) => {
                   className="btn btn-success btn-md"
                   style={{ marginTop: "5px" }}
                 >
-                  Cash on delivery
+                  Ordenar
                 </button>
               </Link>
             </div>

@@ -20,18 +20,20 @@ export const Navbar = ({ user = null }) => {
   return (
     <div className="navbox">
       <div className="leftside">
-        <img src={logo} alt="Ecommerce Logo" />
+        <Link to="/">
+          <img className="logo" src={logo} alt="Ecommerce Logo" />
+        </Link>
       </div>
       {!user ? (
         <div className="rightside">
           <span>
             <Link to="/signup" className="navlink">
-              SIGN UP
+              Registrarse
             </Link>
           </span>
           <span>
             <Link to="/login" className="navlink">
-              LOGIN
+              Iniciar Sesion
             </Link>
           </span>
         </div>
@@ -50,7 +52,7 @@ export const Navbar = ({ user = null }) => {
           <span className="no-of-products">{totalQty}</span>
           <span>
             <button className="logout-btn" onClick={handleLogout}>
-              Logout
+              Cerrar Sesion
             </button>
           </span>
         </div>

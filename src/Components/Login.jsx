@@ -21,13 +21,13 @@ export const Login = () => {
         setError("");
         navigate("/");
       })
-      .catch((err) => setError(err.message));
+      .catch(() => setError("Correo o constraseña incorrecta"));
   };
 
   return (
     <div className="container">
       <br />
-      <h2>Login</h2>
+      <h2>Iniciar Sesion</h2>
       <br />
       <form autoComplete="off" className="form-group" onSubmit={login}>
         <label htmlFor="email">Email</label>
@@ -39,7 +39,7 @@ export const Login = () => {
           value={email}
         />
         <br />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Contraseña</label>
         <input
           type="password"
           className="form-control"
@@ -49,14 +49,13 @@ export const Login = () => {
         />
         <br />
         <button type="submit" className="btn btn-success btn-md mybtn">
-          LOGIN
+          Ingresar
         </button>
       </form>
       {error && <span className="error-msg">{error}</span>}
       <br />
       <span>
-        Don't have an account? Register
-        <Link to="/signup"> Here </Link>
+        No tienes cuenta? Registrate <Link to="/signup"> Aqui </Link>
       </span>
     </div>
   );

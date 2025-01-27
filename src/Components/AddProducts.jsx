@@ -61,7 +61,7 @@ export const AddProducts = () => {
   return (
     <div className="container">
       <br />
-      <h2>ADD PRODUCTS</h2>
+      <h2>Agregar Productos</h2>
       <hr />
       <form autoComplete="off" className="form-group" onSubmit={addProduct}>
         <label htmlFor="product-name">Product Name</label>
@@ -92,7 +92,7 @@ export const AddProducts = () => {
         />
         <br />
         <button type="submit" className="btn btn-success btn-md mybtn">
-          ADD
+          Agregar
         </button>
       </form>
       {error && <span className="error-msg">{error}</span>}

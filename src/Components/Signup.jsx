@@ -39,16 +39,17 @@ export const Signup = () => {
   return (
     <div className="container">
       <br />
-      <h2>Sign up</h2>
+      <h2>Registrarse</h2>
       <br />
       <form autoComplete="off" className="form-group" onSubmit={signup}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Nombre</label>
         <input
           type="text"
           className="form-control"
           required
           onChange={(e) => setName(e.target.value)}
           value={name}
+          placeholder="Nombre"
         />
         <br />
         <label htmlFor="email">Email</label>
@@ -58,26 +59,28 @@ export const Signup = () => {
           required
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          placeholder="ejemplo@gmail.com"
         />
         <br />
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Contraseña</label>
         <input
           type="password"
           className="form-control"
           required
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          placeholder="***************"
         />
         <br />
         <button type="submit" className="btn btn-success btn-md mybtn">
-          SUBMIT
+          Registrarse
         </button>
       </form>
       {error && <span className="error-msg">{error}</span>}
       <br />
       <span>
-        Already have an account? Login
-        <Link to="/login"> Here</Link>
+        Ya tienes cuenta? Inicia sesion
+        <Link to="/login"> Aqui </Link>
       </span>
     </div>
   );
