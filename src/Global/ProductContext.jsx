@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
-import { db } from "../Config/Config"; // Asegúrate de que db se importa correctamente
-import { collection, onSnapshot } from "firebase/firestore"; // Métodos modulares de Firestore
+import { db } from "../Config/Config";
+import { collection, onSnapshot } from "firebase/firestore";
 
 export const ProductsContext = createContext();
 
@@ -10,9 +10,8 @@ export class ProductsContextProvider extends React.Component {
   };
 
   componentDidMount() {
-    const productsCollection = collection(db, "Products"); // Accedemos a la colección de productos
+    const productsCollection = collection(db, "Products");
 
-    // Usamos onSnapshot para escuchar los cambios en la colección
     onSnapshot(productsCollection, (snapshot) => {
       const productsArray = snapshot.docs.map((doc) => ({
         ProductID: doc.id,
@@ -21,7 +20,6 @@ export class ProductsContextProvider extends React.Component {
         ProductImg: doc.data().ProductImg,
       }));
 
-      // Actualizamos el estado con los productos obtenidos
       this.setState({
         products: productsArray,
       });
