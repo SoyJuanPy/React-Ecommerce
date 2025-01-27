@@ -41,7 +41,3 @@ Pagina montada en Vercel:
 
 https://react-ecommerce-4alurd1gg-juampys-projects.vercel.app/login
 ```
-
-```
-
-```
