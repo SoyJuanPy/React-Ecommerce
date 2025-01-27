@@ -41,10 +41,11 @@ Y para correr los tests:
 bun run test
 ```
 
-```
 Pagina Montada en vercel
 
-$bash
+$ bash
 https://react-ecommerce-4alurd1gg-juampys-projects.vercel.app/login
+
+```
 
 ```
