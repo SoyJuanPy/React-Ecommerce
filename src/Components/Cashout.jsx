@@ -65,9 +65,7 @@ export const Cashout = (props) => {
           setCell("");
           setAddress("");
           dispatch({ type: "EMPTY" });
-          setSuccessMsg(
-            "Your order has been placed successfully. Thanks for visiting us. You will be redirected to home page after 5 seconds",
-          );
+          setSuccessMsg("Pedido realizado, se volvera al inicio en 5 segundos");
           setTimeout(() => {
             navigate("/");
           }, 5000);
